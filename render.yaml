@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: safehostel-os
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    healthCheckPath: /api/dashboard
+    envVars:
+      - key: PORT
+        value: 8080
